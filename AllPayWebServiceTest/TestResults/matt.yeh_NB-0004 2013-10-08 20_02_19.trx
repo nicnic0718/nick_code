@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="7799bc02-02ff-46fa-8087-3d2b00ed325f" name="matt.yeh@NB-0004 2013-10-08 20:02:19" runUser="ALLPAY\matt.yeh" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="預設測試設定" id="1d5b8ed3-7b03-4ca5-a758-542fdf48b7cd">
+    <Deployment runDeploymentRoot="matt.yeh_NB-0004 2013-10-08 20_02_19">
+      <DeploymentItem filename="D:\AllPay\allpay_code\source\AllPayWebServiceTest\seleniumDLL\net40\ThoughtWorks.Selenium.Core.dll" />
+      <DeploymentItem filename="D:\AllPay\allpay_code\source\AllPayWebServiceTest\AllPayWebServiceTest.Test\packages\Selenium.WebDriver.2.35.0\lib\net40\WebDriver.dll" />
+      <DeploymentItem filename="D:\AllPay\allpay_code\source\AllPayWebServiceTest\seleniumDLL\net40\Selenium.WebDriverBackedSelenium.dll" />
+      <DeploymentItem filename="D:\AllPay\allpay_code\source\AllPayWebServiceTest\seleniumDLL\net40\WebDriver.Support.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-10-08T20:02:19.6327539+08:00" queuing="2013-10-08T20:02:29.2577163+08:00" start="2013-10-08T20:02:29.5807486+08:00" finish="2013-10-08T20:02:32.7450650+08:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="1" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="d:\allpay\allpay_code\source\allpaywebservicetest\allpaywebservicetest.test\allpaywebservicetest.test\bin\debug\allpaywebservicetest.test.dll" id="d1683ad3-08b5-d1ee-cbf3-6bdebbf2bcdb">
+      <Execution id="48c63053-3fe7-4420-9102-56f021118ec0" />
+      <TestMethod codeBase="D:/AllPay/allpay_code/source/AllPayWebServiceTest/AllPayWebServiceTest.Test/AllPayWebServiceTest.Test/bin/Debug/AllPayWebServiceTest.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="AllPayWebServiceTest.Test.UnitTest1, AllPayWebServiceTest.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="不在清單中的結果" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="所有載入的結果" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="d1683ad3-08b5-d1ee-cbf3-6bdebbf2bcdb" executionId="48c63053-3fe7-4420-9102-56f021118ec0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="48c63053-3fe7-4420-9102-56f021118ec0" testId="d1683ad3-08b5-d1ee-cbf3-6bdebbf2bcdb" testName="TestMethod1" computerName="NB-0004" duration="00:00:00.0083708" startTime="2013-10-08T20:02:29.8957801+08:00" endTime="2013-10-08T20:02:32.5770482+08:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="48c63053-3fe7-4420-9102-56f021118ec0">
+    </UnitTestResult>
+  </Results>
+</TestRun>

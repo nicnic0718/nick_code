@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://PaymentCenter.AllPay.com.tw/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://PaymentCenter.AllPay.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://PaymentCenter.AllPay.com.tw/">
+      <s:element name="AlipayQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="alipayTradeQuery" type="tns:AlipayTradeQueryPost" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="AlipayTradeQueryPost">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantId" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AlipayQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AlipayQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AlipayQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:AlipayQuery" />
+  </wsdl:message>
+  <wsdl:message name="AlipayQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:AlipayQueryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="alipaySoap">
+    <wsdl:operation name="AlipayQuery">
+      <wsdl:input message="tns:AlipayQuerySoapIn" />
+      <wsdl:output message="tns:AlipayQuerySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="alipaySoap" type="tns:alipaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AlipayQuery">
+      <soap:operation soapAction="http://PaymentCenter.AllPay.com.tw/AlipayQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="alipaySoap12" type="tns:alipaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AlipayQuery">
+      <soap12:operation soapAction="http://PaymentCenter.AllPay.com.tw/AlipayQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="alipay">
+    <wsdl:port name="alipaySoap" binding="tns:alipaySoap">
+      <soap:address location="http://localhost:12003/MerchantApi/Alipay.asmx" />
+    </wsdl:port>
+    <wsdl:port name="alipaySoap12" binding="tns:alipaySoap12">
+      <soap12:address location="http://localhost:12003/MerchantApi/Alipay.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

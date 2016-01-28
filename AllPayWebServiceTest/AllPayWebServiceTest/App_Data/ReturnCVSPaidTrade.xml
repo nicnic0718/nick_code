@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+  <Data>
+    <MerchantID></MerchantID>
+    <MerchantTradeNo></MerchantTradeNo>
+    <RtnCode></RtnCode>
+    <RtnMsg></RtnMsg>
+    <TradeNo></TradeNo>
+    <PayDate></PayDate>
+    <TradeAmount></TradeAmount>      
+    <PaymentNo></PaymentNo>    
+    <PayFrom></PayFrom>
+  </Data>
+</Root>

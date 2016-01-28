@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://PaymentCenter.AllPay.com.tw/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://PaymentCenter.AllPay.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://PaymentCenter.AllPay.com.tw/">
+      <s:element name="WebATMQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantTradeNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebATMQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="WebATMQueryResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebATMQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:WebATMQuery" />
+  </wsdl:message>
+  <wsdl:message name="WebATMQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:WebATMQueryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WebATMSoap">
+    <wsdl:operation name="WebATMQuery">
+      <wsdl:input message="tns:WebATMQuerySoapIn" />
+      <wsdl:output message="tns:WebATMQuerySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WebATMSoap" type="tns:WebATMSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebATMQuery">
+      <soap:operation soapAction="http://PaymentCenter.AllPay.com.tw/WebATMQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebATMSoap12" type="tns:WebATMSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="WebATMQuery">
+      <soap12:operation soapAction="http://PaymentCenter.AllPay.com.tw/WebATMQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WebATM">
+    <wsdl:port name="WebATMSoap" binding="tns:WebATMSoap">
+      <soap:address location="https://pay.allpay.com.tw/MerchantApi/WebATM.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WebATMSoap12" binding="tns:WebATMSoap12">
+      <soap12:address location="https://pay.allpay.com.tw/MerchantApi/WebATM.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,86 @@
+﻿<h2>登入APP</h2>
+
+@using (Ajax.BeginForm("Login", "MockLogistics", new AjaxOptions { UpdateTargetId = "divLoginResult" }))
+{ 
+    <div class="divOrderLeft">@Html.Label("lblAccount", "Account")</div><div class="divOrderRight">@Html.TextBox("Account")</div>
+    <div class="divOrderLeft">@Html.Label("lblUserCode", "UserCode")</div><div class="divOrderRight">@Html.TextBox("UserCode")</div>
+    <div class="divOrderLeft">@Html.Label("lblPWD", "PWD")</div><div class="divOrderRight">@Html.TextBox("PWD")</div>
+    <div class="divOrderLeft">@Html.Label("lblDeviceID", "DeviceID")</div><div class="divOrderRight">@Html.TextBox("DeviceID")</div>
+    <div class="divOrderLeft">@Html.Label("lblAppName", "AppName")</div><div class="divOrderRight">@Html.TextBox("AppName")</div>
+    <div class="divOrderLeft">@Html.Label("lblSaveMode", "SaveMode")</div><div class="divOrderRight">@Html.TextBox("SaveMode")</div>
+    <div class="divOrderLeft">@Html.Label("lblRegistrationID", "RegistrationID")</div><div class="divOrderRight">@Html.TextBox("RegistrationID")</div>
+    <div class="divOrderLeft">@Html.Label("lblOS", "OS")</div><div class="divOrderRight">@Html.TextBox("OS")</div>
+    <div class="divOrderLeft">@Html.Label("lblVersionCode", "VersionCode")</div><div class="divOrderRight">@Html.TextBox("VersionCode")</div>
+    <div class="divOrderLeft">@Html.Label("lblTimeStamp", "TimeStamp")</div><div class="divOrderRight">@Html.TextBox("TimeStamp")</div>
+    <div class="divOrderLeft">@Html.Label("lblSMSAuthCode", "SMSAuthCode")</div><div class="divOrderRight">@Html.TextBox("SMSAuthCode")</div>
+    <div class="divOrderLeft">@Html.Label("lblIDAuthCode", "IDAuthCode")</div><div class="divOrderRight">@Html.TextBox("IDAuthCode")</div>
+    <button id="btnLogin">登入</button>
+}
+
+<div id="divLoginResult"></div>
+
+<h2>產生收款QRCode</h2>
+
+@using (Ajax.BeginForm("CreateBarcode", "MockLogistics", new AjaxOptions { UpdateTargetId = "divLoginResult2" }))
+{ 
+    <div class="divOrderLeft">@Html.Label("lblMID", "MID")</div><div class="divOrderRight">@Html.TextBox("MID")</div>
+    <div class="divOrderLeft">@Html.Label("lblLoginTokenID", "LoginTokenID")</div><div class="divOrderRight">@Html.TextBox("LoginTokenID")</div>
+    <div class="divOrderLeft">@Html.Label("lblTradeAmount", "TradeAmount")</div><div class="divOrderRight">@Html.TextBox("TradeAmount")</div>
+    <div class="divOrderLeft">@Html.Label("lblGroupID", "GroupID")</div><div class="divOrderRight">@Html.TextBox("GroupID")</div>
+    <div class="divOrderLeft">@Html.Label("lblTimeStamp", "TimeStamp")</div><div class="divOrderRight">@Html.TextBox("TimeStamp")</div>
+    <button id="btnLogin">送出</button>
+}
+
+<div id="divLoginResult2"></div>
+
+<div id="divLoginResult"></div>
+
+<h2>掃瞄收款QRCode付款-檢查QRCode及更新付款資訊</h2>
+
+@using (Ajax.BeginForm("CheckBarcodeSellerInfo", "MockLogistics", new AjaxOptions { UpdateTargetId = "divLoginResult3" }))
+{ 
+    <div class="divOrderLeft">@Html.Label("lblMID", "MID")</div><div class="divOrderRight">@Html.TextBox("MID")</div>
+    <div class="divOrderLeft">@Html.Label("lblLoginTokenID", "LoginTokenID")</div><div class="divOrderRight">@Html.TextBox("LoginTokenID")</div>
+    <div class="divOrderLeft">@Html.Label("lblBarcode", "Barcode")</div><div class="divOrderRight">@Html.TextBox("Barcode")</div>
+    <div class="divOrderLeft">@Html.Label("lblMerchantID", "MerchantID")</div><div class="divOrderRight">@Html.TextBox("MerchantID")</div>
+    <div class="divOrderLeft">@Html.Label("lblTimeStamp", "TimeStamp")</div><div class="divOrderRight">@Html.TextBox("TimeStamp")</div>
+    <button id="btnLogin">送出</button>
+}
+
+<div id="divLoginResult3"></div>
+
+<h2>掃瞄收款QRCode付款-確認付款</h2>
+
+@using (Ajax.BeginForm("AppCreateOrder", "MockLogistics", new AjaxOptions { UpdateTargetId = "divLoginResult4" }))
+{ 
+    <div class="divOrderLeft">@Html.Label("lblMID", "MID")</div><div class="divOrderRight">@Html.TextBox("MID")</div>
+    <div class="divOrderLeft">@Html.Label("lblLoginTokenID", "LoginTokenID")</div><div class="divOrderRight">@Html.TextBox("LoginTokenID")</div>
+    <div class="divOrderLeft">@Html.Label("lblTimeStamp", "TimeStamp")</div><div class="divOrderRight">@Html.TextBox("TimeStamp")</div>
+    <div class="divOrderLeft">@Html.Label("lblTotalAmount", "TotalAmount")</div><div class="divOrderRight">@Html.TextBox("TotalAmount")</div>
+    <div class="divOrderLeft">@Html.Label("lblBarcode", "Barcode")</div><div class="divOrderRight">@Html.TextBox("Barcode")</div>    
+    <div class="divOrderLeft">@Html.Label("lblMerchantID", "MerchantID")</div><div class="divOrderRight">@Html.TextBox("MerchantID")</div>    
+    <div class="divOrderLeft">@Html.Label("lblBankCode", "BankCode")</div><div class="divOrderRight">@Html.TextBox("BankCode")</div>
+    <div class="divOrderLeft">@Html.Label("lblBankBranchCode", "BankBranchCode")</div><div class="divOrderRight">@Html.TextBox("BankBranchCode")</div>
+    <div class="divOrderLeft">@Html.Label("lblSMSAuth", "SMSAuth")</div><div class="divOrderRight">@Html.TextBox("SMSAuth")</div>
+    <div class="divOrderLeft">@Html.Label("lblAppTokenAuth", "AppTokenAuth")</div><div class="divOrderRight">@Html.TextBox("AppTokenAuth")</div>
+    <div class="divOrderLeft">@Html.Label("lblPaymentType", "PaymentType")</div><div class="divOrderRight">@Html.TextBox("PaymentType")</div>
+    
+    <button id="btnLogin">送出</button>
+}
+
+<div id="divLoginResult4"></div>
+
+
+<h2>掃瞄收款QRCode付款-取消付款</h2>
+
+@using (Ajax.BeginForm("AppCancelOrder", "MockLogistics", new AjaxOptions { UpdateTargetId = "divLoginResult5" }))
+{ 
+    <div class="divOrderLeft">@Html.Label("lblMID", "MID")</div><div class="divOrderRight">@Html.TextBox("MID")</div>
+    <div class="divOrderLeft">@Html.Label("lblLoginTokenID", "LoginTokenID")</div><div class="divOrderRight">@Html.TextBox("LoginTokenID")</div>
+    <div class="divOrderLeft">@Html.Label("lblBarcode", "Barcode")</div><div class="divOrderRight">@Html.TextBox("Barcode")</div>
+    <div class="divOrderLeft">@Html.Label("lblMerchantID", "MerchantID")</div><div class="divOrderRight">@Html.TextBox("MerchantID")</div>
+    <div class="divOrderLeft">@Html.Label("lblTimeStamp", "TimeStamp")</div><div class="divOrderRight">@Html.TextBox("TimeStamp")</div>
+    <button id="btnLogin">送出</button>
+}
+
+<div id="divLoginResult5"></div>

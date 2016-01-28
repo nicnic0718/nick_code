@@ -1,0 +1,3 @@
+log create time:20131112 17:13:15
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>2000132</MerchantID><MerchantTradeNo>2013111201</MerchantTradeNo><TradeNo>0000</TradeNo><RtnCode>10100089</RtnCode><gwsr>0</gwsr><process_date></process_date><auth_code></auth_code><amount></amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no></card4no><card6no></card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+

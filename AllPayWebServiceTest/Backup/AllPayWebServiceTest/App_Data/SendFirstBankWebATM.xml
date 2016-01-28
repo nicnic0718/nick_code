@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="big5" ?>
+<CardPayRq>
+    <SendSeqNo></SendSeqNo>
+    <MID></MID>
+    <FunCode></FunCode>
+    <UserData></UserData>
+    <ONO></ONO>
+    <InAccountNo></InAccountNo>
+    <Amount></Amount>
+    <MAC></MAC>
+    <RsURL></RsURL>
+</CardPayRq>

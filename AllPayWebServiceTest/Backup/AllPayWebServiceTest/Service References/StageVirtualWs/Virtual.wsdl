@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Payment.allpay.com.tw/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Payment.allpay.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Payment.allpay.com.tw/">
+      <s:element name="QueryTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryTradeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Exchange">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExchangeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExchangeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeBack">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ChargeBackResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ChargeBackResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryTrade" />
+  </wsdl:message>
+  <wsdl:message name="QueryTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryTradeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExchangeSoapIn">
+    <wsdl:part name="parameters" element="tns:Exchange" />
+  </wsdl:message>
+  <wsdl:message name="ExchangeSoapOut">
+    <wsdl:part name="parameters" element="tns:ExchangeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ChargeBackSoapIn">
+    <wsdl:part name="parameters" element="tns:ChargeBack" />
+  </wsdl:message>
+  <wsdl:message name="ChargeBackSoapOut">
+    <wsdl:part name="parameters" element="tns:ChargeBackResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VirtualSoap">
+    <wsdl:operation name="QueryTrade">
+      <wsdl:input message="tns:QueryTradeSoapIn" />
+      <wsdl:output message="tns:QueryTradeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Exchange">
+      <wsdl:input message="tns:ExchangeSoapIn" />
+      <wsdl:output message="tns:ExchangeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeBack">
+      <wsdl:input message="tns:ChargeBackSoapIn" />
+      <wsdl:output message="tns:ChargeBackSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VirtualSoap" type="tns:VirtualSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryTrade">
+      <soap:operation soapAction="http://Payment.allpay.com.tw/QueryTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exchange">
+      <soap:operation soapAction="http://Payment.allpay.com.tw/Exchange" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeBack">
+      <soap:operation soapAction="http://Payment.allpay.com.tw/ChargeBack" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VirtualSoap12" type="tns:VirtualSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryTrade">
+      <soap12:operation soapAction="http://Payment.allpay.com.tw/QueryTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Exchange">
+      <soap12:operation soapAction="http://Payment.allpay.com.tw/Exchange" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeBack">
+      <soap12:operation soapAction="http://Payment.allpay.com.tw/ChargeBack" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Virtual">
+    <wsdl:port name="VirtualSoap" binding="tns:VirtualSoap">
+      <soap:address location="http://payment-stage.allpay.com.tw/api/purchase/Virtual.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VirtualSoap12" binding="tns:VirtualSoap12">
+      <soap12:address location="http://payment-stage.allpay.com.tw/api/purchase/Virtual.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

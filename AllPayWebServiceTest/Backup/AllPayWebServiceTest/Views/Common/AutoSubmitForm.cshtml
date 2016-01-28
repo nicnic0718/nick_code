@@ -1,0 +1,13 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoSubmitForm</title>
+</head>
+<body>
+    <img src="@Url.Content("~/Content/themes/base/images/wait.gif")" alt="wait" /><span style="color: red">交易資料處理中，請勿重新整理網頁或關閉視窗.</span>
+    @Html.Raw((string)TempData["PostForm"])
+</body>
+</html>

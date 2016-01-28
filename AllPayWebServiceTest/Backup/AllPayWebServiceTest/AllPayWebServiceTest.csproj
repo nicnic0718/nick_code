@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{60D3FA56-258D-4A5E-AC13-691D41784EF6}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AllPayWebServiceTest</RootNamespace>
+    <AssemblyName>AllPayWebServiceTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AES">
+      <HintPath>Z:\資訊\特店介接文件\程式範例\AllpayAES\AES.dll</HintPath>
+    </Reference>
+    <Reference Include="AllPay.ShareLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\dll_reference\AllPay.ShareLib.dll</HintPath>
+    </Reference>
+    <Reference Include="AllPay.ShareLib.KeyCrypt">
+      <HintPath>..\..\..\dll_reference\AllPay.ShareLib.KeyCrypt.dll</HintPath>
+    </Reference>
+    <Reference Include="ctcbMac">
+      <HintPath>..\..\..\dll_reference\ctcbMac.dll</HintPath>
+    </Reference>
+    <Reference Include="ctcbPos">
+      <HintPath>..\..\..\dll_reference\ctcbPos.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\AllPayPayment\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebDriver">
+      <HintPath>..\packages\Selenium.WebDriver.2.35.0\lib\net40\WebDriver.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AES_EnCrypt.cs" />
+    <Compile Include="Controllers\AlipayController.cs" />
+    <Compile Include="Controllers\AllPayMemberController.cs" />
+    <Compile Include="Controllers\AllPayPaymentController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\CheckXmlDataController.cs" />
+    <Compile Include="Controllers\CommonController.cs" />
+    <Compile Include="Controllers\CreditActionController.cs" />
+    <Compile Include="Controllers\CreditController.cs" />
+    <Compile Include="Controllers\CreditPeriodController.cs" />
+    <Compile Include="Controllers\CVSController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LineController.cs" />
+    <Compile Include="Controllers\MockAIOPaymentController.cs" />
+    <Compile Include="Controllers\MockCreditController.cs" />
+    <Compile Include="Controllers\MockLogisticsController.cs" />
+    <Compile Include="Controllers\MockPaymentController.cs" />
+    <Compile Include="Controllers\MockPaymentCenterController.cs" />
+    <Compile Include="Controllers\MockSMSController.cs" />
+    <Compile Include="Controllers\MockTinyURLController.cs" />
+    <Compile Include="Controllers\TenpayController.cs" />
+    <Compile Include="Controllers\TestAIOController.cs" />
+    <Compile Include="Controllers\TestBarcodeController.cs" />
+    <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Controllers\VirtualAccController.cs" />
+    <Compile Include="Controllers\VirtualController.cs" />
+    <Compile Include="Controllers\WebATMController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Line.cs" />
+    <Compile Include="Models\BaseModel.cs" />
+    <Compile Include="Models\ExchangeModel.cs" />
+    <Compile Include="Models\MerchantFunction.cs" />
+    <Compile Include="Models\PartnerMemberRegister.cs" />
+    <Compile Include="Models\ViewModel\FirstWebATMClientReturn.cs" />
+    <Compile Include="Models\ViewModel\GuaranteeChargebackPost.cs" />
+    <Compile Include="Models\ViewModel\GuaranteeChargebackPostItem.cs" />
+    <Compile Include="Models\ViewModel\GuaranteeCreateGuaranteePost.cs" />
+    <Compile Include="Models\ViewModel\GuaranteeCreateGuaranteePostItem.cs" />
+    <Compile Include="Models\ViewModel\MerchantETicketData.cs" />
+    <Compile Include="Models\ViewModel\MerchantETicketItemData.cs" />
+    <Compile Include="Models\ViewModel\Trade.cs" />
+    <Compile Include="Models\ViewModel\TradeData.cs" />
+    <Compile Include="Models\ViewModel\TradeDetail.cs" />
+    <Compile Include="Models\ViewModel\TradeItemsDetail.cs" />
+    <Compile Include="Models\ViewModel\TradeNo.cs" />
+    <Compile Include="Models\VirtualModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\AllPayEsunPaymentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\AllPaysharedws\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ApiWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevAllpayWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevPaymentCenterAlipay\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevPaymentCenterCredit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevPaymentCenterCVS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevPaymentCenterTenpay\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevPaymentCenterVirtualAccount\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevPaymentCenterWebATM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\DevVirtualWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\PostGate\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProdApiTopUpWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProdPaymentCenterCredit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ProdPaymentCenterWebATM\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StageAllpayWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StagePaymentCenterCredit\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\StageVirtualWs\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\VirtualWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\BasePaymentService.cs" />
+    <Compile Include="Service\ConfigService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\NoticeMerchantATM.xml" />
+    <Content Include="App_Data\PaymentReceiveAlipay.xml" />
+    <Content Include="App_Data\PaymentReceiveTenpay.xml" />
+    <Content Include="App_Data\QueryVirtualTrade.xml" />
+    <Content Include="App_Data\ReturnCVSPaidTrade.xml" />
+    <Content Include="App_Data\ReturnMerchantWebATM.xml" />
+    <Content Include="App_Data\ReturnVirtualChargeBack.xml" />
+    <Content Include="App_Data\SendFirstBankWebATM.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\SendFirstWebATMOrderCheck.xml" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <None Include="App_Data\XSD\PaymentCenterAlipayTrade.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterAtmTrade.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterCreditDoAction.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterCreditResendOtp.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterCreditTrade.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterCreditTradeWebService.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterCreditVerifyOtp.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterCVSTrade.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterTenpayTrade.xsd" />
+    <None Include="App_Data\XSD\PaymentCenterWebAtmTrade.xsd" />
+    <None Include="Service References\AllPayEsunPaymentService\AllPayWebServiceTest.AllPayEsunPaymentService.BalanceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\AllPayWebServiceTest.AllPayEsunPaymentService.RejectResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\AllPayWebServiceTest.AllPayEsunPaymentService.TransFreeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\AllPayWebServiceTest.AllPayEsunPaymentService.TransResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\PayService.wsdl" />
+    <None Include="Service References\AllPayEsunPaymentService\PayService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\PayService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\PayService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\AllPaysharedws\AllPaysharedws.wsdl" />
+    <None Include="Service References\ApiWS\AllPayWebServiceTest.ApiWS.AllPayMerchantFunction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ApiWS\AllPayWebServiceTest.ApiWS.PaymentMerchantFunction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ApiWS\apiws.wsdl" />
+    <None Include="Service References\ApiWS\apiws.disco" />
+    <None Include="Service References\ApiWS\configuration91.svcinfo" />
+    <None Include="Service References\ApiWS\configuration.svcinfo" />
+    <None Include="Service References\ApiWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevAllpayWs\allpay.wsdl" />
+    <None Include="Service References\DevPaymentCenterAlipay\Alipay.wsdl" />
+    <None Include="Service References\DevPaymentCenterCredit\CreditCard.wsdl" />
+    <None Include="Service References\DevPaymentCenterCVS\CVS.wsdl" />
+    <None Include="Service References\DevPaymentCenterTenpay\Tenpay.wsdl" />
+    <None Include="Service References\DevPaymentCenterVirtualAccount\AllPayWebServiceTest.DevPaymentCenterVirtualAccount.ATMTradeQueryOutput.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\DevPaymentCenterVirtualAccount\VirtualAccount.wsdl" />
+    <None Include="Service References\DevPaymentCenterWebATM\WebATM.wsdl" />
+    <None Include="Service References\DevVirtualWs\Virtual.wsdl" />
+    <None Include="Service References\PostGate\PostGate.wsdl" />
+    <None Include="Service References\ProdApiTopUpWs\AllPayWebServiceTest.ProdApiTopUpWs.TopUpMemberBankInfo.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ProdApiTopUpWs\TopUpWS.wsdl" />
+    <None Include="Service References\ProdPaymentCenterCredit\CreditCard.wsdl" />
+    <None Include="Service References\ProdPaymentCenterWebATM\WebATM.wsdl" />
+    <None Include="Service References\StageAllpayWs\allpay.wsdl" />
+    <None Include="Service References\StagePaymentCenterCredit\CreditCard.wsdl" />
+    <None Include="Service References\StageVirtualWs\Virtual.wsdl" />
+    <None Include="Service References\VirtualWS\Virtual.disco" />
+    <None Include="Service References\VirtualWS\configuration91.svcinfo" />
+    <None Include="Service References\VirtualWS\configuration.svcinfo" />
+    <None Include="Service References\VirtualWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevVirtualWs\Virtual.disco" />
+    <None Include="Service References\DevVirtualWs\configuration91.svcinfo" />
+    <None Include="Service References\DevVirtualWs\configuration.svcinfo" />
+    <None Include="Service References\DevVirtualWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\StageVirtualWs\Virtual.disco" />
+    <None Include="Service References\StageVirtualWs\configuration91.svcinfo" />
+    <None Include="Service References\StageVirtualWs\configuration.svcinfo" />
+    <None Include="Service References\StageVirtualWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevPaymentCenterWebATM\WebATM.disco" />
+    <None Include="Service References\DevPaymentCenterWebATM\configuration91.svcinfo" />
+    <None Include="Service References\DevPaymentCenterWebATM\configuration.svcinfo" />
+    <None Include="Service References\DevPaymentCenterWebATM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProdPaymentCenterWebATM\WebATM.disco" />
+    <None Include="Service References\ProdPaymentCenterWebATM\configuration91.svcinfo" />
+    <None Include="Service References\ProdPaymentCenterWebATM\configuration.svcinfo" />
+    <None Include="Service References\ProdPaymentCenterWebATM\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevAllpayWs\allpay.disco" />
+    <None Include="Service References\DevAllpayWs\configuration91.svcinfo" />
+    <None Include="Service References\DevAllpayWs\configuration.svcinfo" />
+    <None Include="Service References\DevAllpayWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\StageAllpayWs\allpay.disco" />
+    <None Include="Service References\StageAllpayWs\configuration91.svcinfo" />
+    <None Include="Service References\StageAllpayWs\configuration.svcinfo" />
+    <None Include="Service References\StageAllpayWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AllPayEsunPaymentService\PayService.disco" />
+    <None Include="Service References\AllPayEsunPaymentService\configuration91.svcinfo" />
+    <None Include="Service References\AllPayEsunPaymentService\configuration.svcinfo" />
+    <None Include="Service References\AllPayEsunPaymentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\AllPaysharedws\AllPaysharedws.disco" />
+    <None Include="Service References\AllPaysharedws\configuration91.svcinfo" />
+    <None Include="Service References\AllPaysharedws\configuration.svcinfo" />
+    <None Include="Service References\AllPaysharedws\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevPaymentCenterVirtualAccount\VirtualAccount.disco" />
+    <None Include="Service References\DevPaymentCenterVirtualAccount\configuration91.svcinfo" />
+    <None Include="Service References\DevPaymentCenterVirtualAccount\configuration.svcinfo" />
+    <None Include="Service References\DevPaymentCenterVirtualAccount\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevPaymentCenterCVS\CVS.disco" />
+    <None Include="Service References\DevPaymentCenterCVS\configuration91.svcinfo" />
+    <None Include="Service References\DevPaymentCenterCVS\configuration.svcinfo" />
+    <None Include="Service References\DevPaymentCenterCVS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevPaymentCenterAlipay\Alipay.disco" />
+    <None Include="Service References\DevPaymentCenterAlipay\configuration91.svcinfo" />
+    <None Include="Service References\DevPaymentCenterAlipay\configuration.svcinfo" />
+    <None Include="Service References\DevPaymentCenterAlipay\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevPaymentCenterCredit\CreditCard.disco" />
+    <None Include="Service References\DevPaymentCenterCredit\configuration91.svcinfo" />
+    <None Include="Service References\DevPaymentCenterCredit\configuration.svcinfo" />
+    <None Include="Service References\DevPaymentCenterCredit\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\StagePaymentCenterCredit\CreditCard.disco" />
+    <None Include="Service References\StagePaymentCenterCredit\configuration91.svcinfo" />
+    <None Include="Service References\StagePaymentCenterCredit\configuration.svcinfo" />
+    <None Include="Service References\StagePaymentCenterCredit\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProdPaymentCenterCredit\CreditCard.disco" />
+    <None Include="Service References\ProdPaymentCenterCredit\configuration91.svcinfo" />
+    <None Include="Service References\ProdPaymentCenterCredit\configuration.svcinfo" />
+    <None Include="Service References\ProdPaymentCenterCredit\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ProdApiTopUpWs\TopUpWS.disco" />
+    <None Include="Service References\ProdApiTopUpWs\configuration91.svcinfo" />
+    <None Include="Service References\ProdApiTopUpWs\configuration.svcinfo" />
+    <None Include="Service References\ProdApiTopUpWs\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\DevPaymentCenterTenpay\Tenpay.disco" />
+    <None Include="Service References\DevPaymentCenterTenpay\configuration91.svcinfo" />
+    <None Include="Service References\DevPaymentCenterTenpay\configuration.svcinfo" />
+    <None Include="Service References\DevPaymentCenterTenpay\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\PostGate\PostGate.disco" />
+    <None Include="Service References\PostGate\configuration91.svcinfo" />
+    <None Include="Service References\PostGate\configuration.svcinfo" />
+    <None Include="Service References\PostGate\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Virtual\ChargeBack.cshtml" />
+    <Content Include="Views\Virtual\ChargeBackConfirm.cshtml" />
+    <Content Include="Views\Virtual\Exchange.cshtml" />
+    <None Include="Service References\VirtualWS\Virtual.wsdl" />
+    <Content Include="Views\AllPayPayment\SendDeliveryNotify.cshtml" />
+    <Content Include="Views\AllPayPayment\Index.cshtml" />
+    <Content Include="Views\AllPayPayment\SendDeliveryNotify_Receive.cshtml" />
+    <Content Include="Views\AllPayPayment\ReceiveOrderResult.cshtml" />
+    <Content Include="Views\AllPayPayment\SendOrderChangeNotify.cshtml" />
+    <Content Include="Views\AllPayPayment\SendOrderChangeNotify_Receive.cshtml" />
+    <Content Include="Views\AllPayPayment\DevQueryTrade.cshtml" />
+    <Content Include="Views\AllPayPayment\DevQueryTrade_Receive.cshtml" />
+    <Content Include="Views\AllPayPayment\StageQueryTrade.cshtml" />
+    <Content Include="Views\AllPayPayment\StageQueryTrade_Receive.cshtml" />
+    <Content Include="Views\AllPayPayment\OrderStateChangeReceive.cshtml" />
+    <Content Include="Views\MockPayment\TestCVSReturnToPayment.cshtml" />
+    <Content Include="Views\MockPayment\TestWebAtmReturn.cshtml" />
+    <Content Include="Views\MockPayment\TestAtmHncbReturn.cshtml" />
+    <Content Include="Views\MockPaymentCenter\TestCvsReturnToPaymentCenter.cshtml" />
+    <Content Include="Views\AllPayPayment\ReceiveBackUrlResult.cshtml" />
+    <Content Include="Views\Common\AutoSubmitForm.cshtml" />
+    <Content Include="Views\MockCredit\TestPaymentCenterWebServiceTrade.cshtml" />
+    <Content Include="Views\MockCredit\TestPaymentCenterWebServiceVerifyOtp.cshtml" />
+    <Content Include="Views\MockCredit\TestCreditResendOtp.cshtml" />
+    <Content Include="Views\MockPayment\TestEticketCreateGuarantee.cshtml" />
+    <Content Include="Views\MockPayment\TestEticketChargeBack.cshtml" />
+    <Content Include="Views\Virtual\SendChargBackNotify.cshtml" />
+    <Content Include="Views\MockPayment\TestCvsToPaymentCenter.cshtml" />
+    <Content Include="Views\MockPayment\TestAtmToPaymentCenter.cshtml" />
+    <Content Include="Views\MockPayment\FrameIndex.cshtml" />
+    <Content Include="Views\MockPayment\FrameButtom.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\MockCredit\ReceiveOrderResult.cshtml" />
+    <Content Include="Views\MockCredit\CreateMPOSTradeToPaymentCenter.cshtml" />
+    <Content Include="Views\MockLogistics\Login.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\ReceiveNotify\OrderChangeNotify\" />
+    <Folder Include="App_Data\ReceiveNotify\PaidNotify\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\AllPayEsunPaymentService\" />
+    <WCFMetadataStorage Include="Service References\AllPaysharedws\" />
+    <WCFMetadataStorage Include="Service References\ApiWS\" />
+    <WCFMetadataStorage Include="Service References\DevAllpayWs\" />
+    <WCFMetadataStorage Include="Service References\DevPaymentCenterAlipay\" />
+    <WCFMetadataStorage Include="Service References\DevPaymentCenterCredit\" />
+    <WCFMetadataStorage Include="Service References\DevPaymentCenterCVS\" />
+    <WCFMetadataStorage Include="Service References\DevPaymentCenterTenpay\" />
+    <WCFMetadataStorage Include="Service References\DevPaymentCenterVirtualAccount\" />
+    <WCFMetadataStorage Include="Service References\DevPaymentCenterWebATM\" />
+    <WCFMetadataStorage Include="Service References\DevVirtualWs\" />
+    <WCFMetadataStorage Include="Service References\PostGate\" />
+    <WCFMetadataStorage Include="Service References\ProdApiTopUpWs\" />
+    <WCFMetadataStorage Include="Service References\ProdPaymentCenterCredit\" />
+    <WCFMetadataStorage Include="Service References\ProdPaymentCenterWebATM\" />
+    <WCFMetadataStorage Include="Service References\StageAllpayWs\" />
+    <WCFMetadataStorage Include="Service References\StagePaymentCenterCredit\" />
+    <WCFMetadataStorage Include="Service References\StageVirtualWs\" />
+    <WCFMetadataStorage Include="Service References\VirtualWS\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SECURITYLib">
+      <Guid>{D7E9804F-74A7-4DA2-A165-43DA437E90D7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>12020</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+    <Data>
+        <MerchantID></MerchantID>
+        <MerchantTradeNo></MerchantTradeNo>
+        <RtnCode></RtnCode>
+        <RtnMsg></RtnMsg>
+        <TradeNo></TradeNo>
+        <TradeDate></TradeDate>
+        <TradeAmount></TradeAmount>
+        <AlipayID></AlipayID>
+        <AlipayTradeNo></AlipayTradeNo>
+        <TimeStamp></TimeStamp>
+        </Data>
+</Root>
+

@@ -1,0 +1,30 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>信用卡建立訂單(WebService版)</title>
+</head>
+<body>
+    <div id="ReponseXML">
+    收到回覆的XML:<br />
+    @ViewBag.returnEncryptXml    
+    </div>
+    <div>
+    @using (Html.BeginForm("TestPaymentCenterWebServiceVerifyOtp", "mockCredit/"))
+    {
+        <input type="hidden" name="TradeNo" value="@ViewBag.TradeNo" />        
+        <input type="hidden" name="MerchantID" value="@ViewBag.MerchantID" />
+        <input type="hidden" name="MerchantTradeNo" value="@ViewBag.MerchantTradeNo" />
+    <p>    
+    <input type="text" name="OtpCode" value="" />
+    <input type="submit" />
+    </p>    
+    
+    }    
+    </div>
+</body>
+</html>

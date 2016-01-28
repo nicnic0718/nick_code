@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FormPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPostData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProxyIP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCodePage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormPostResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeoutSeconds" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LineWarning">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="d" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="LineWarningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LineWarningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FormPostSoapIn">
+    <wsdl:part name="parameters" element="tns:FormPost" />
+  </wsdl:message>
+  <wsdl:message name="FormPostSoapOut">
+    <wsdl:part name="parameters" element="tns:FormPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:DoRequest" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:DoRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="LineWarningSoapIn">
+    <wsdl:part name="parameters" element="tns:LineWarning" />
+  </wsdl:message>
+  <wsdl:message name="LineWarningSoapOut">
+    <wsdl:part name="parameters" element="tns:LineWarningResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PostGateSoap">
+    <wsdl:operation name="FormPost">
+      <wsdl:input message="tns:FormPostSoapIn" />
+      <wsdl:output message="tns:FormPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoRequest">
+      <wsdl:input message="tns:DoRequestSoapIn" />
+      <wsdl:output message="tns:DoRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="LineWarning">
+      <wsdl:input message="tns:LineWarningSoapIn" />
+      <wsdl:output message="tns:LineWarningSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PostGateSoap" type="tns:PostGateSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FormPost">
+      <soap:operation soapAction="http://tempuri.org/FormPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequest">
+      <soap:operation soapAction="http://tempuri.org/DoRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LineWarning">
+      <soap:operation soapAction="http://tempuri.org/LineWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PostGateSoap12" type="tns:PostGateSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FormPost">
+      <soap12:operation soapAction="http://tempuri.org/FormPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequest">
+      <soap12:operation soapAction="http://tempuri.org/DoRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LineWarning">
+      <soap12:operation soapAction="http://tempuri.org/LineWarning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PostGate">
+    <wsdl:port name="PostGateSoap" binding="tns:PostGateSoap">
+      <soap:address location="http://localhost:12030/Service/PostGate.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PostGateSoap12" binding="tns:PostGateSoap12">
+      <soap12:address location="http://localhost:12030/Service/PostGate.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

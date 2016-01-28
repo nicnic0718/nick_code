@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PaymentCenterCreditTradeWebService" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Root" msdata:IsDataSet="false" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element name="Data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MerchantID" type="xs:string" minOccurs="1" />
+              <xs:element name="MerchantTradeNo" type="xs:string" minOccurs="1" />
+              <xs:element name="MerchantTradeDate" type="xs:string" minOccurs="1" />
+              <xs:element name="TotalAmount" type="xs:integer" minOccurs="1" />
+              <xs:element name="TradeDesc" type="xs:string" minOccurs="1" />
+              <xs:element name="CardNo" type="xs:integer" minOccurs="1" />
+              <xs:element name="CardValidMM" type="xs:integer" minOccurs="1" />
+              <xs:element name="CardValidYY" type="xs:integer" minOccurs="1" />
+              <xs:element name="CardCVV2" type="xs:integer" minOccurs="1" />
+              <xs:element name="UnionPay" type="xs:integer" minOccurs="1" />              
+              <xs:element name="Installment" type="xs:integer" minOccurs="1" />
+              <xs:element name="ThreeD" type="xs:integer" minOccurs="1" />
+              <xs:element name="CharSet" type="xs:string" minOccurs="1" />              
+              <xs:element name="Enn" type="xs:string" minOccurs="1" />
+              <xs:element name="BankOnly" type="xs:string" minOccurs="1" />              
+              <xs:element name="Redeem" type="xs:string" minOccurs="1" />
+              <xs:element name="ReturnURL" type="xs:string" minOccurs="0" />
+              <xs:element name="ServerReplyURL" type="xs:string" minOccurs="0" />
+              <xs:element name="ClientBackURL" type="xs:string" minOccurs="0" />              
+              <xs:element name="PhoneNumber" type="xs:string" minOccurs="1" />
+              <xs:element name="AddMember" type="xs:integer" minOccurs="1" />
+              <xs:element name="CName" type="xs:string" minOccurs="1" />
+              <xs:element name="Email" type="xs:string" minOccurs="1" />
+              <xs:element name="Remark" type="xs:string" minOccurs="1" />              
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>  

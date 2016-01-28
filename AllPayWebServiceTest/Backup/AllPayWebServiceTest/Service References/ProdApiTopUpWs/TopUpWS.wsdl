@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="TopUpBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="mid" type="s:long" />
+            <s:element minOccurs="1" maxOccurs="1" name="merchantID" type="s:long" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="TopUpBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TopUpBalanceResult" type="tns:ArrayOfTopUpMemberBankInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfTopUpMemberBankInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TopUpMemberBankInfo" nillable="true" type="tns:TopUpMemberBankInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TopUpMemberBankInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MID" type="s:long" />
+          <s:element minOccurs="1" maxOccurs="1" name="MerchantID" type="s:long" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserVAccNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BankVAccNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AuthName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TopUpLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MonthlyTradeLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DailyTradeLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="SingleTradeLimit" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MonthlyTopUpAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MonthlyTradeAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DailyTopUpAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DailyTradeAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MonthlyAvailableTradeAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="DailyAvailableTradeAmount" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TopUpCash" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="AvailableTopUpAmount" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="SystemBankName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RtnCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RtnMsg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="TopUpBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:TopUpBalance" />
+  </wsdl:message>
+  <wsdl:message name="TopUpBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:TopUpBalanceResponse" />
+  </wsdl:message>
+  <wsdl:portType name="TopUpWSSoap">
+    <wsdl:operation name="TopUpBalance">
+      <wsdl:input message="tns:TopUpBalanceSoapIn" />
+      <wsdl:output message="tns:TopUpBalanceSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TopUpWSSoap" type="tns:TopUpWSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TopUpBalance">
+      <soap:operation soapAction="http://tempuri.org/TopUpBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TopUpWSSoap12" type="tns:TopUpWSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="TopUpBalance">
+      <soap12:operation soapAction="http://tempuri.org/TopUpBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TopUpWS">
+    <wsdl:port name="TopUpWSSoap" binding="tns:TopUpWSSoap">
+      <soap:address location="http://apiservice.allpay.com.tw/api/SharedService/TopUpWS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TopUpWSSoap12" binding="tns:TopUpWSSoap12">
+      <soap12:address location="http://apiservice.allpay.com.tw/api/SharedService/TopUpWS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

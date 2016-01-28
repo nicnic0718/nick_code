@@ -1,0 +1,18 @@
+log create time:20131015 09:15:28
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1020203</MerchantID><MerchantTradeNo>20131015091326</MerchantTradeNo><TradeNo>20131015091328927031</TradeNo><RtnCode>1</RtnCode><gwsr>10169134</gwsr><process_date>2013/10/15 09:14:04</process_date><auth_code>654855</auth_code><amount>3</amount><stage>3</stage><stast>1</stast><staed>1</staed><eci>0</eci><card4no>0907</card4no><card6no>457961</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131015 09:48:52
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1020203</MerchantID><MerchantTradeNo>20131015094809</MerchantTradeNo><TradeNo>20131015094811168339</TradeNo><RtnCode>10100058</RtnCode><gwsr>10169161</gwsr><process_date>2013/10/15 09:48:43</process_date><auth_code></auth_code><amount></amount><stage>3</stage><stast>0</stast><staed>0</staed><eci>7</eci><card4no>2222</card4no><card6no>356083</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131015 10:03:18
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1020203</MerchantID><MerchantTradeNo>20131015100243</MerchantTradeNo><TradeNo>20131015100243320649</TradeNo><RtnCode>10100058</RtnCode><gwsr>10169177</gwsr><process_date>2013/10/15 10:03:10</process_date><auth_code></auth_code><amount></amount><stage>3</stage><stast>0</stast><staed>0</staed><eci>7</eci><card4no>2222</card4no><card6no>518523</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131015 10:12:52
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1020203</MerchantID><MerchantTradeNo>20131015101132</MerchantTradeNo><TradeNo>20131015101133172102</TradeNo><RtnCode>10100058</RtnCode><gwsr>10169184</gwsr><process_date>2013/10/15 10:12:43</process_date><auth_code></auth_code><amount></amount><stage>3</stage><stast>0</stast><staed>0</staed><eci>7</eci><card4no>2222</card4no><card6no>469586</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131015 10:14:07
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1020203</MerchantID><MerchantTradeNo>20131015101336</MerchantTradeNo><TradeNo>20131015101336906117</TradeNo><RtnCode>10100058</RtnCode><gwsr>10169189</gwsr><process_date>2013/10/15 10:13:58</process_date><auth_code></auth_code><amount></amount><stage>3</stage><stast>0</stast><staed>0</staed><eci>7</eci><card4no>2222</card4no><card6no>436387</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131015 10:17:51
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1020203</MerchantID><MerchantTradeNo>20131015101729</MerchantTradeNo><TradeNo>20131015101729794998</TradeNo><RtnCode>10100058</RtnCode><gwsr>10169192</gwsr><process_date>2013/10/15 10:17:42</process_date><auth_code></auth_code><amount></amount><stage>3</stage><stast>0</stast><staed>0</staed><eci>7</eci><card4no>2222</card4no><card6no>356759</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+

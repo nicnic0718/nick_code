@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="FormPost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strURL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPostData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProxyIP" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="intPort" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="intCodePage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="FormPostResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FormPostResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequest">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeoutSeconds" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoRequestResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestForEncoding">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeoutSeconds" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="CodePage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestForEncodingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoRequestForEncodingResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestForGoogleMap">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeoutSeconds" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestForGoogleMapResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoRequestForGoogleMapResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestBig5">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestUrl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="postData" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="contentType" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="TimeoutSeconds" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoRequestBig5Response">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoRequestBig5Result" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoGet">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="requestUrlWithGetParameter" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="codePage" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DoGetResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DoGetResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GWLineWarning">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LineMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GWLineWarningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GWLineWarningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllPayLineWarning">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="LineMsg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AllPayLineWarningResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AllPayLineWarningResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="FormPostSoapIn">
+    <wsdl:part name="parameters" element="tns:FormPost" />
+  </wsdl:message>
+  <wsdl:message name="FormPostSoapOut">
+    <wsdl:part name="parameters" element="tns:FormPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestSoapIn">
+    <wsdl:part name="parameters" element="tns:DoRequest" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestSoapOut">
+    <wsdl:part name="parameters" element="tns:DoRequestResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestForEncodingSoapIn">
+    <wsdl:part name="parameters" element="tns:DoRequestForEncoding" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestForEncodingSoapOut">
+    <wsdl:part name="parameters" element="tns:DoRequestForEncodingResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestForGoogleMapSoapIn">
+    <wsdl:part name="parameters" element="tns:DoRequestForGoogleMap" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestForGoogleMapSoapOut">
+    <wsdl:part name="parameters" element="tns:DoRequestForGoogleMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestBig5SoapIn">
+    <wsdl:part name="parameters" element="tns:DoRequestBig5" />
+  </wsdl:message>
+  <wsdl:message name="DoRequestBig5SoapOut">
+    <wsdl:part name="parameters" element="tns:DoRequestBig5Response" />
+  </wsdl:message>
+  <wsdl:message name="DoGetSoapIn">
+    <wsdl:part name="parameters" element="tns:DoGet" />
+  </wsdl:message>
+  <wsdl:message name="DoGetSoapOut">
+    <wsdl:part name="parameters" element="tns:DoGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="GWLineWarningSoapIn">
+    <wsdl:part name="parameters" element="tns:GWLineWarning" />
+  </wsdl:message>
+  <wsdl:message name="GWLineWarningSoapOut">
+    <wsdl:part name="parameters" element="tns:GWLineWarningResponse" />
+  </wsdl:message>
+  <wsdl:message name="AllPayLineWarningSoapIn">
+    <wsdl:part name="parameters" element="tns:AllPayLineWarning" />
+  </wsdl:message>
+  <wsdl:message name="AllPayLineWarningSoapOut">
+    <wsdl:part name="parameters" element="tns:AllPayLineWarningResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PostGateSoap">
+    <wsdl:operation name="FormPost">
+      <wsdl:input message="tns:FormPostSoapIn" />
+      <wsdl:output message="tns:FormPostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoRequest">
+      <wsdl:input message="tns:DoRequestSoapIn" />
+      <wsdl:output message="tns:DoRequestSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestForEncoding">
+      <wsdl:input message="tns:DoRequestForEncodingSoapIn" />
+      <wsdl:output message="tns:DoRequestForEncodingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestForGoogleMap">
+      <wsdl:input message="tns:DoRequestForGoogleMapSoapIn" />
+      <wsdl:output message="tns:DoRequestForGoogleMapSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestBig5">
+      <wsdl:input message="tns:DoRequestBig5SoapIn" />
+      <wsdl:output message="tns:DoRequestBig5SoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DoGet">
+      <wsdl:input message="tns:DoGetSoapIn" />
+      <wsdl:output message="tns:DoGetSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GWLineWarning">
+      <wsdl:input message="tns:GWLineWarningSoapIn" />
+      <wsdl:output message="tns:GWLineWarningSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AllPayLineWarning">
+      <wsdl:input message="tns:AllPayLineWarningSoapIn" />
+      <wsdl:output message="tns:AllPayLineWarningSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PostGateSoap" type="tns:PostGateSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FormPost">
+      <soap:operation soapAction="http://tempuri.org/FormPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequest">
+      <soap:operation soapAction="http://tempuri.org/DoRequest" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestForEncoding">
+      <soap:operation soapAction="http://tempuri.org/DoRequestForEncoding" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestForGoogleMap">
+      <soap:operation soapAction="http://tempuri.org/DoRequestForGoogleMap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestBig5">
+      <soap:operation soapAction="http://tempuri.org/DoRequestBig5" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoGet">
+      <soap:operation soapAction="http://tempuri.org/DoGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GWLineWarning">
+      <soap:operation soapAction="http://tempuri.org/GWLineWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllPayLineWarning">
+      <soap:operation soapAction="http://tempuri.org/AllPayLineWarning" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PostGateSoap12" type="tns:PostGateSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FormPost">
+      <soap12:operation soapAction="http://tempuri.org/FormPost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequest">
+      <soap12:operation soapAction="http://tempuri.org/DoRequest" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestForEncoding">
+      <soap12:operation soapAction="http://tempuri.org/DoRequestForEncoding" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestForGoogleMap">
+      <soap12:operation soapAction="http://tempuri.org/DoRequestForGoogleMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoRequestBig5">
+      <soap12:operation soapAction="http://tempuri.org/DoRequestBig5" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DoGet">
+      <soap12:operation soapAction="http://tempuri.org/DoGet" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GWLineWarning">
+      <soap12:operation soapAction="http://tempuri.org/GWLineWarning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AllPayLineWarning">
+      <soap12:operation soapAction="http://tempuri.org/AllPayLineWarning" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PostGate">
+    <wsdl:port name="PostGateSoap" binding="tns:PostGateSoap">
+      <soap:address location="http://localhost:12030/Service/PostGate.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PostGateSoap12" binding="tns:PostGateSoap12">
+      <soap12:address location="http://localhost:12030/Service/PostGate.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
