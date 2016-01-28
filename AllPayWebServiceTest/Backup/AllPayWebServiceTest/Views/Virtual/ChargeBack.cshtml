@@ -1,0 +1,81 @@
+﻿@model AllPayWebServiceTest.Models.VirtualModel
+
+@{
+    ViewBag.Title = "ChargeBack";
+}
+
+<h2>ChargeBack</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>VirtualModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MerchantID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MerchantID)
+            @Html.ValidationMessageFor(model => model.MerchantID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.MerchantTradeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.MerchantTradeNo)
+            @Html.ValidationMessageFor(model => model.MerchantTradeNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeNo)
+            @Html.ValidationMessageFor(model => model.TradeNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ItemNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ItemNo)
+            @Html.ValidationMessageFor(model => model.ItemNo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Amount)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Amount)
+            @Html.ValidationMessageFor(model => model.Amount)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SNO)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.SNO)
+            @Html.ValidationMessageFor(model => model.SNO)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TimeStamp)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TimeStamp)
+            @Html.ValidationMessageFor(model => model.TimeStamp)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>

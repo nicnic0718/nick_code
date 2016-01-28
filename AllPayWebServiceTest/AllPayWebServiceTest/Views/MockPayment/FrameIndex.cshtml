@@ -1,0 +1,19 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd">
+<html>
+<head>
+</head>
+<frameset rows="110,*" cols="*" frameborder="0" border="0" framespacing="0">
+    <frame src="@Url.Action("FrameButtom", "MockPayment")" name="topFrame" scrolling="No" noresize="noresize" id="topFrame" />
+        <frameset rows="*" cols="190,*" framespacing="0" frameborder="1" border="1">
+            <frame src="@Url.Action("FrameButtom", "MockPayment")" name="leftFrame" scrolling="Yes" resizable="yes"  id="leftFrame" />
+            <frame src="@Url.Action("FrameButtom", "MockPayment")" name="contentFrame" resizable="yes" id="contentFrame" />
+        </frameset>
+</frameset>
+<noframes>
+    <body>
+    </body>
+</noframes>
+</html>

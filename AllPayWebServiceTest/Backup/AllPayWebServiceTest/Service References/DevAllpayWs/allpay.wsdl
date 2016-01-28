@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://Payment.allpay.com.tw/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://Payment.allpay.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://Payment.allpay.com.tw/">
+      <s:element name="QueryTrade">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MerchantID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="XMLData" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="QueryTradeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="QueryTradeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="QueryTradeSoapIn">
+    <wsdl:part name="parameters" element="tns:QueryTrade" />
+  </wsdl:message>
+  <wsdl:message name="QueryTradeSoapOut">
+    <wsdl:part name="parameters" element="tns:QueryTradeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AllPaySoap">
+    <wsdl:operation name="QueryTrade">
+      <wsdl:input message="tns:QueryTradeSoapIn" />
+      <wsdl:output message="tns:QueryTradeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AllPaySoap" type="tns:AllPaySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryTrade">
+      <soap:operation soapAction="http://Payment.allpay.com.tw/QueryTrade" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AllPaySoap12" type="tns:AllPaySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryTrade">
+      <soap12:operation soapAction="http://Payment.allpay.com.tw/QueryTrade" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AllPay">
+    <wsdl:port name="AllPaySoap" binding="tns:AllPaySoap">
+      <soap:address location="http://localhost:12005/api/purchase/allpay.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AllPaySoap12" binding="tns:AllPaySoap12">
+      <soap12:address location="http://localhost:12005/api/purchase/allpay.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

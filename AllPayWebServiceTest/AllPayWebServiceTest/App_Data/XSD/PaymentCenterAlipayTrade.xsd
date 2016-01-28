@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PaymentCenterAlipayTrade" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="Root" msdata:IsDataSet="false" msdata:Locale="en-US">
+    <xs:complexType>
+      <xs:choice minOccurs="1" maxOccurs="1">
+        <xs:element name="Data">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MerchantID" type="xs:string" minOccurs="1" />
+              <xs:element name="MerchantTradeNo" type="xs:string" minOccurs="1" />
+              <xs:element name="MerchantTradeDate" type="xs:string" minOccurs="1" />
+              <xs:element name="TradeAmount" type="xs:integer" minOccurs="1" />
+              <xs:element name="ItemName" type="xs:string" minOccurs="1" />
+              <xs:element name="ItemCounts" type="xs:string" minOccurs="1" />
+              <xs:element name="ItemPrice" type="xs:string" minOccurs="1" />
+              <xs:element name="ServerReplyURL" type="xs:string" minOccurs="1" />
+              <xs:element name="ClientReplyURL" type="xs:string" minOccurs="1" />
+              <xs:element name="Remark" type="xs:string" minOccurs="1" />
+              <xs:element name="Email" type="xs:string" minOccurs="1" />
+              <xs:element name="PhoneNo" type="xs:string" minOccurs="1" />
+              <xs:element name="UserName" type="xs:string" minOccurs="1" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

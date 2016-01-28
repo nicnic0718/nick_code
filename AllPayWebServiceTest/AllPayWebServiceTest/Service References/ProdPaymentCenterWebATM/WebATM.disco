@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="https://pay.allpay.com.tw/MerchantApi/WebATM.asmx?wsdl" docRef="https://pay.allpay.com.tw/MerchantApi/WebATM.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="https://pay.allpay.com.tw/MerchantApi/WebATM.asmx" xmlns:q1="http://PaymentCenter.AllPay.com.tw/" binding="q1:WebATMSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="https://pay.allpay.com.tw/MerchantApi/WebATM.asmx" xmlns:q2="http://PaymentCenter.AllPay.com.tw/" binding="q2:WebATMSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

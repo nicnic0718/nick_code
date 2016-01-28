@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <p>@Html.ActionLink("模擬廠商通知AllPay出貨", "SendDeliveryNotify")</p>
+        <p>@Html.ActionLink("模擬廠商通知AllPay退換貨", "SendOrderChangeNotify")</p>        
+        <p>接收到付款結果通知在App_Data/PaidNotify</p>
+        <p>接收到退貨/換貨/取消訂單的通知在App_Data/PaidNotify</p>
+        <hr />
+        <p>@Html.ActionLink("Dev訂單查詢", "DevQueryTrade")</p>
+        <p>@Html.ActionLink("Stage訂單查詢", "StageQueryTrade")</p>
+    </div>
+</body>
+</html>

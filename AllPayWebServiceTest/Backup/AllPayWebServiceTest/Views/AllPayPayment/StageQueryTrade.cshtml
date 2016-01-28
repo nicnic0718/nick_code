@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>DevQueryTrade</title>
+</head>
+<body>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <p>
+        <input type="submit" value="查詢訂單" />
+    </p>
+    <fieldset>
+        <legend>訂單查詢-stage</legend>
+        <div class="editor-label">
+            MerchantID
+        </div>
+        <div class="editor-field">
+            <input type="text" name="MerchantID" value="@ViewBag.MerchantID">
+        </div>
+        <div class="editor-label">
+            MerchantTradeNo
+        </div>
+        <div class="editor-field">
+             <input type="text" name="MerchantTradeNo" value="@ViewBag.MerchantTradeNo">
+            (必需輸入)
+        </div>
+        
+
+    </fieldset>
+}
+</body>
+</html>

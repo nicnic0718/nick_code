@@ -1,0 +1,9 @@
+log create time:20131009 10:21:32
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131009101931</MerchantTradeNo><TradeNo>20131009101932968963</TradeNo><RtnCode>1</RtnCode><gwsr>10164387</gwsr><process_date>2013/10/09 10:21:25</process_date><auth_code>777777</auth_code><amount>10001</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131009 13:11:09
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131009130930</MerchantTradeNo><TradeNo>20131009130931733589</TradeNo><RtnCode>10100058</RtnCode><gwsr>10164553</gwsr><process_date>2013/10/09 13:10:56</process_date><auth_code></auth_code><amount></amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>457961</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131009 14:18:39
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131009141631</MerchantTradeNo><TradeNo>20131009141632648056</TradeNo><RtnCode>1</RtnCode><gwsr>10164623</gwsr><process_date>2013/10/09 14:18:36</process_date><auth_code>777777</auth_code><amount>10015</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+

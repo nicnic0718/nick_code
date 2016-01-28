@@ -1,0 +1,12 @@
+log create time:20131031 10:19:30
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>2000132</MerchantID><MerchantTradeNo>20131031101928</MerchantTradeNo><TradeNo>20131031101929229516</TradeNo><RtnCode>1</RtnCode><gwsr>10183078</gwsr><process_date>2013/10/31 10:19:29</process_date><auth_code>777777</auth_code><amount>35</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131031 10:39:54
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>2000132</MerchantID><MerchantTradeNo>20131031103952</MerchantTradeNo><TradeNo>20131031103953289349</TradeNo><RtnCode>1</RtnCode><gwsr>10183101</gwsr><process_date>2013/10/31 10:39:53</process_date><auth_code>777777</auth_code><amount>35</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131031 10:40:36
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>2000132</MerchantID><MerchantTradeNo>20131031104035</MerchantTradeNo><TradeNo>20131031104035930441</TradeNo><RtnCode>1</RtnCode><gwsr>10183103</gwsr><process_date>2013/10/31 10:40:36</process_date><auth_code>777777</auth_code><amount>35</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131031 10:46:16
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>2000132</MerchantID><MerchantTradeNo>20131031104459</MerchantTradeNo><TradeNo>20131031104459083947</TradeNo><RtnCode>1</RtnCode><gwsr>10183107</gwsr><process_date>2013/10/31 10:46:15</process_date><auth_code>777777</auth_code><amount>35</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+

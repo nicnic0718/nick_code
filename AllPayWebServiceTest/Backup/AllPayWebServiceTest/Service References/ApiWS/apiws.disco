@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://apiservice-stage.allpay.com.tw/api/apiws.asmx?wsdl" docRef="http://apiservice-stage.allpay.com.tw/api/apiws.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://apiservice-stage.allpay.com.tw/api/apiws.asmx" xmlns:q1="http://testApiService.allpay.com.tw/" binding="q1:ApiWSSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://apiservice-stage.allpay.com.tw/api/apiws.asmx" xmlns:q2="http://testApiService.allpay.com.tw/" binding="q2:ApiWSSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

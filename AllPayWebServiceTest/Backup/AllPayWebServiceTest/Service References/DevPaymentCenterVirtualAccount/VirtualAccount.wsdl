@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://PaymentCenter.AllPay.com.tw/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://PaymentCenter.AllPay.com.tw/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://PaymentCenter.AllPay.com.tw/">
+      <s:element name="ATMQuery">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="merchantID" type="s:long" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchantTradeNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ATMQueryResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ATMQueryResult" type="tns:ATMTradeQueryOutput" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ATMTradeQueryOutput">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MerchantTradeNo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RtnCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RtnMsg" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TradeNo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="_paymentDate" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaymentDate" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="TradeAmt" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccBank" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AccNo" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ATMQuerySoapIn">
+    <wsdl:part name="parameters" element="tns:ATMQuery" />
+  </wsdl:message>
+  <wsdl:message name="ATMQuerySoapOut">
+    <wsdl:part name="parameters" element="tns:ATMQueryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="VirtualAccountSoap">
+    <wsdl:operation name="ATMQuery">
+      <wsdl:input message="tns:ATMQuerySoapIn" />
+      <wsdl:output message="tns:ATMQuerySoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VirtualAccountSoap" type="tns:VirtualAccountSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ATMQuery">
+      <soap:operation soapAction="http://PaymentCenter.AllPay.com.tw/ATMQuery" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="VirtualAccountSoap12" type="tns:VirtualAccountSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ATMQuery">
+      <soap12:operation soapAction="http://PaymentCenter.AllPay.com.tw/ATMQuery" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VirtualAccount">
+    <wsdl:port name="VirtualAccountSoap" binding="tns:VirtualAccountSoap">
+      <soap:address location="http://localhost:12003/MerchantApi/VirtualAccount.asmx" />
+    </wsdl:port>
+    <wsdl:port name="VirtualAccountSoap12" binding="tns:VirtualAccountSoap12">
+      <soap12:address location="http://localhost:12003/MerchantApi/VirtualAccount.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

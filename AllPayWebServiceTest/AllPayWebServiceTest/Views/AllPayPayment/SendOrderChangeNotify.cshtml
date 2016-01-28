@@ -1,0 +1,101 @@
+﻿@{
+    Layout = null;
+}
+
+@using AllPayWebServiceTest.Models
+@model AllPayWebServiceTest.Models.ViewModel.Trade
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>SendDeliveryNotify</title>
+</head>
+<body>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <p>
+        <input type="submit" value="寄送退換貨通知" />
+    </p>
+    <fieldset>
+        <legend>模擬廠商通知AllPay退換貨和取消訂單的通知</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.MerchantID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.MerchantID)
+            (stage環境請用1000139)
+            @Html.ValidationMessageFor(model => model.TradeDetail.MerchantID)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.MerchantTradeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.MerchantTradeNo)
+            (必需輸入)
+            @Html.ValidationMessageFor(model => model.TradeDetail.MerchantTradeNo)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeNo.AllPayTradeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeNo.AllPayTradeNo)
+            (必需輸入)
+            @Html.ValidationMessageFor(model => model.TradeNo.AllPayTradeNo)
+        </div>        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.CharSet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.CharSet)
+            @Html.ValidationMessageFor(model => model.TradeDetail.CharSet)
+        </div>
+       
+        <p>商品資料</p>
+        @for (int i = 0; i < Model.TradeItemsDetailList.Count(); i++)
+        {
+            <table border="1">
+                <tr>
+                    <td>
+                        ItemNo
+                    </td>
+                    <td>
+                        @Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].ItemNo)
+                    </td>
+                </tr>      
+                <tr>
+                    <td>
+                        商品數量x商品單價的金額
+                    </td>
+                    <td>
+                        @Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].SubTotalAMT)
+                    </td>
+                </tr>             
+                <tr>
+                    <td>
+                        通知種類
+                    </td>
+                    <td>@Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].ShippingState)
+                    (1:退貨通知 / 2:換貨通知 / 3:取消訂單)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        回覆退貨/換貨/取消訂單通知結果
+                    </td>
+                    <td>@Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].VendorReplyStatus)
+                    (1為同意，0為不同意)
+                    </td>
+                </tr>
+                
+            </table>
+            <br />
+        }
+    </fieldset>
+}
+</body>
+</html>

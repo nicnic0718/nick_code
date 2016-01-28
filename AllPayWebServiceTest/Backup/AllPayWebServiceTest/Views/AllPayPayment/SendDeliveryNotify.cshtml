@@ -1,0 +1,98 @@
+﻿@{
+    Layout = null;
+}
+
+@using AllPayWebServiceTest.Models
+@model AllPayWebServiceTest.Models.ViewModel.Trade
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>SendDeliveryNotify</title>
+</head>
+<body>
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+
+    <p>
+        <input type="submit" value="寄送出貨通知" />
+    </p>
+    <fieldset>
+        <legend>模擬廠商通知AllPay出貨狀況</legend>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.MerchantID)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.MerchantID)
+            (stage環境請用1000139)
+            @Html.ValidationMessageFor(model => model.TradeDetail.MerchantID)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.MerchantTradeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.MerchantTradeNo)
+            (必需輸入)
+            @Html.ValidationMessageFor(model => model.TradeDetail.MerchantTradeNo)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeNo.AllPayTradeNo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeNo.AllPayTradeNo)
+            (必需輸入)
+            @Html.ValidationMessageFor(model => model.TradeNo.AllPayTradeNo)
+        </div>        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.CharSet)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.CharSet)
+            @Html.ValidationMessageFor(model => model.TradeDetail.CharSet)
+        </div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.TradeDetail.Remark)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.TradeDetail.Remark)
+            @Html.ValidationMessageFor(model => model.TradeDetail.Remark)
+        </div>
+        <p>商品資料</p>
+        @for (int i = 0; i < Model.TradeItemsDetailList.Count(); i++)
+        {
+            <table border="1">
+                <tr>
+                    <td>
+                        ItemNo
+                    </td>
+                    <td>
+                        @Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].ItemNo)
+                    </td>
+                </tr>                
+                <tr>
+                    <td>
+                        出貨狀態
+                    </td>
+                    <td>@Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].ShippingState)
+                    (5:出貨 / 6:無貨可出 / 7:延遲出貨)
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ShippingDate
+                    </td>
+                    <td>@Html.EditorFor(modelItem => @Model.TradeItemsDetailList[i].ShippingDate)
+                    </td>
+                </tr>
+                
+            </table>
+            <br />
+        }
+    </fieldset>
+}
+</body>
+</html>

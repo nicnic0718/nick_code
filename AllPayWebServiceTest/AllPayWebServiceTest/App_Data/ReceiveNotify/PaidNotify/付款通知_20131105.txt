@@ -1,0 +1,18 @@
+log create time:20131105 11:28:50
+XML data:
+
+log create time:20131105 13:48:32
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>2000132</MerchantID><MerchantTradeNo>20131105134759</MerchantTradeNo><TradeNo>20131105134801998805</TradeNo><RtnCode>1</RtnCode><gwsr>10187197</gwsr><process_date>2013/11/05 13:48:31</process_date><auth_code>777777</auth_code><amount>3</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131105 14:21:29
+XML data:
+
+log create time:20131105 14:37:15
+XML data:
+
+log create time:20131105 20:54:44
+XML data:
+
+log create time:20131105 20:59:04
+XML data:
+

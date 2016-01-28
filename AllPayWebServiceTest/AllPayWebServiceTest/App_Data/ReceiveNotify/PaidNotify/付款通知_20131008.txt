@@ -1,0 +1,15 @@
+log create time:20131008 13:44:17
+XML data:
+
+log create time:20131008 19:29:11
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131008192814</MerchantTradeNo><TradeNo>20131008192816412853</TradeNo><RtnCode>1</RtnCode><gwsr>10163956</gwsr><process_date>2013/10/08 19:29:08</process_date><auth_code>777777</auth_code><amount>10001</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131008 19:29:11
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131008192814</MerchantTradeNo><TradeNo>20131008192816412853</TradeNo><RtnCode>1</RtnCode><gwsr>10163956</gwsr><process_date>2013/10/08 19:29:08</process_date><auth_code>777777</auth_code><amount>10001</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131008 20:04:09
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131008200316</MerchantTradeNo><TradeNo>20131008200320924562</TradeNo><RtnCode>1</RtnCode><gwsr>10163976</gwsr><process_date>2013/10/08 20:04:02</process_date><auth_code>777777</auth_code><amount>10001</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
+log create time:20131008 20:04:12
+XML data:<?xml version="1.0" encoding="utf-8"?><Root><Data><MerchantID>1000070</MerchantID><MerchantTradeNo>20131008200316</MerchantTradeNo><TradeNo>20131008200320924562</TradeNo><RtnCode>1</RtnCode><gwsr>10163976</gwsr><process_date>2013/10/08 20:04:02</process_date><auth_code>777777</auth_code><amount>10001</amount><stage>0</stage><stast>0</stast><staed>0</staed><eci>0</eci><card4no>2222</card4no><card6no>431195</card6no><red_dan>0</red_dan><red_de_amt>0</red_de_amt><red_ok_amt>0</red_ok_amt><red_yet>0</red_yet></Data></Root>
+
