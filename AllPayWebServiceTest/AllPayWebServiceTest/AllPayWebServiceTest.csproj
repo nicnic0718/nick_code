@@ -46,27 +46,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AES">
-      <HintPath>Z:\資訊\特店介接文件\程式範例\AllpayAES\AES.dll</HintPath>
+    <Reference Include="AES, Version=1.0.0.0, Culture=neutral, PublicKeyToken=30f0f566b1b8d2a2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\dll_reference\AES.dll</HintPath>
     </Reference>
     <Reference Include="AllPay.ShareLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\dll_reference\AllPay.ShareLib.dll</HintPath>
+      <HintPath>..\..\dll_reference\AllPay.ShareLib.dll</HintPath>
     </Reference>
     <Reference Include="AllPay.ShareLib.KeyCrypt">
-      <HintPath>..\..\..\dll_reference\AllPay.ShareLib.KeyCrypt.dll</HintPath>
+      <HintPath>..\..\dll_reference\AllPay.ShareLib.KeyCrypt.dll</HintPath>
     </Reference>
     <Reference Include="ctcbMac">
-      <HintPath>..\..\..\dll_reference\ctcbMac.dll</HintPath>
+      <HintPath>..\..\dll_reference\ctcbMac.dll</HintPath>
     </Reference>
     <Reference Include="ctcbPos">
-      <HintPath>..\..\..\dll_reference\ctcbPos.dll</HintPath>
+      <HintPath>..\..\dll_reference\ctcbPos.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework">
       <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\AllPayPayment\packages\Newtonsoft.Json.4.5.10\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\..\dll_reference\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
